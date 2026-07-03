@@ -1,0 +1,20 @@
+Storage Assessment Report
+
+1. Available storage devices:
+Command: lsblk
+Observation: I used lsblk to list all available block storage devices. The output provided a tree-like view of the attached disks and their respective partitions.
+
+2. Mounted file systems & Storage Health:
+Command: df -h
+Observation: I ran df -h to view mounted file systems and available space. The primary partition has sufficient space, indicating healthy storage capacity.
+
+3. Disk usage statistics:
+Command: du -sh /* 2>/dev/null | head -n 10
+Observation: I used du -sh to calculate a summary of disk usage for top-level directories, highlighting which folders consume the most space.
+
+4. Inode utilization:
+Command: df -i
+Observation: I executed df -i to check inode utilization. There is a high percentage of free inodes, ensuring new files can be created without system errors.
+
+5. Recommendations:
+Regularly monitor directories that tend to grow quickly. Set up automated alerts if disk or inode usage exceeds 80% to prevent application downtime.
