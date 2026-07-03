@@ -1,0 +1,21 @@
+Project Workspace Report
+
+1. Directory structure:
+Command: mkdir -p secure_project/docs
+Observation: I used mkdir -p to create a new directory structure. The -p flag ensured the parent directory and subdirectory were created simultaneously.
+
+2. Umask value:
+Command: umask
+Observation: I ran umask to check the default file creation permissions mask on my system, which determines the initial permissions assigned to newly created files.
+
+3. Permissions before modification:
+Command: ls -ld secure_project
+Observation: I checked the default permissions of the newly created directory before making any modifications to establish a baseline.
+
+4. Modifying permissions:
+Command: chmod 750 secure_project
+Observation: I used chmod 750 to restrict access, granting full permissions to the owner, read/execute to the group, and no access to others. This protects project data from unauthorized users.
+
+5. Verifying modifications:
+Command: ls -ld secure_project
+Observation: I re-ran the list command to verify the changes. The output confirmed the updated permissions (drwxr-x---).
