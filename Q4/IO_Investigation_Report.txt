@@ -1,0 +1,17 @@
+I/O Investigation Report
+
+1. Open files:
+Command: lsof -u $USER | head -n 10
+Observation: I used lsof filtered by my username to list files currently opened by my processes, revealing the active file descriptors being used by the system.
+
+2. Output and error redirection:
+Command: ls missing_file.txt > output.txt 2> error.txt
+Observation: I intentionally ran a command on a non-existent file. Standard output (STDOUT/1) was redirected to output.txt, and standard error (STDERR/2) was caught and redirected into error.txt.
+
+3. Verifying redirection:
+Command: cat error.txt
+Observation: I read the contents of the error file. It correctly contained the "No such file or directory" message, proving Linux separates normal output streams from error streams.
+
+4. Resource limits:
+Command: ulimit -a
+Observation: I ran ulimit -a to view the resource limits imposed on my shell session. I observed constraints like the maximum number of open file descriptors allowed, which prevents a single process from exhausting system resources.
