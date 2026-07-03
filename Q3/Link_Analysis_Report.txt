@@ -1,0 +1,21 @@
+Link Analysis Report
+
+1. File creation:
+Command: echo "Important Data" > original.txt
+Observation: I created a base text file and redirected a sample string into it to use for link testing.
+
+2. Hard link creation:
+Command: ln original.txt hardlink.txt
+Observation: I created a hard link, which creates a new directory entry pointing to the exact same data blocks on the disk as the original file.
+
+3. Symbolic link creation:
+Command: ln -s original.txt symlink.txt
+Observation: I created a symbolic link, which acts as a shortcut pointing to the file path of the original file, not the data blocks.
+
+4. Inode comparison:
+Command: ls -li
+Observation: The output showed that the original file and the hard link share the exact same inode number, while the symbolic link has a unique inode number.
+
+5. Deletion effect:
+Command: rm original.txt followed by reading the links with cat
+Observation: After deleting the original file, the hard link still displayed the data because the underlying inode remained intact. The symbolic link returned an error because its target path no longer existed.
