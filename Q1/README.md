@@ -1,31 +1,19 @@
-# Linux CLI Lab
+# Question 1: Environment Diagnostics
 
-This repository contains the solutions and environment reports for the Linux Command Line Interface (CLI) Lab.
+This directory contains the initial environment setup and diagnostic reports for the Linux CLI Lab.
 
-## 📁 Repository Structure
+## 📁 Files Included
 
-* **`Q1/`**: Contains the initial environment diagnostics.
-    * `Environment_Report.txt`: System setup details.
-    * Screenshots showing terminal verification.
-* **`Q5/`**: Disk usage and file system analysis.
-    * Contains outputs for disk space monitoring (`df -h`, `du -sh`).
-
----
-
-## 🛠️ Commands Used
-
-During this lab, the following core Linux CLI tools were utilized:
-
-* **System Diagnostics:** `df -h` (disk free space), `df -i` (inode usage).
-* **Directory Management:** `du -sh` (directory space usage), `mkdir` (create directories).
-* **File Operations:** Output redirection (`>`) to log terminal data into text files.
+* **`Environment_Report.txt`**: Detailed system diagnostics capturing the baseline specifications of the Google Cloud Shell environment.
+* **`Screenshot 2026-07-03 200013.png`**: Terminal verification screenshot showing the execution of system commands.
+* **`Screenshot 2026-07-03 200039.png`**: Additional environment state verification.
+* **`Screenshot 2026-07-03 200332.png`**: Final confirmation of the diagnostic steps.
 
 ---
 
-## 🚀 How to Run the Scripts
+## 🛠️ Diagnostics Captured
 
-If you are validating the outputs in a Google Cloud Shell environment:
-
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/its-shadow7/-Linux-CLI-Lab-SGA1.git](https://github.com/its-shadow7/-Linux-CLI-Lab-SGA1.git)
+The core parameters checked during this configuration include:
+1. Active shell type and user permissions.
+2. Initial working directory verification.
+3. System architecture and environment variable baselines.
